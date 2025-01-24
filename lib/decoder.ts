@@ -3,7 +3,7 @@ import {
   fetchContractAbiResponseSchema,
   fetchFunctionInterface4ByteSchema,
   fetchFunctionInterfaceOpenApiSchema,
-} from "@/data/schemas";
+} from "../data/schemas";
 import {
   DecodeArrayParamResult,
   DecodeBytesParamResult,
@@ -11,8 +11,8 @@ import {
   DecodeRecursiveResult,
   DecodeTupleParamResult,
   ParsedTransaction,
-} from "@/types";
-import { fetchContractAbi, startHexWith0x } from "@/utils";
+} from "../types";
+import { fetchContractAbi, startHexWith0x } from "../utils";
 import { guessAbiEncodedData, guessFragment } from "@openchainxyz/abi-guesser";
 import {
   AbiCoder,

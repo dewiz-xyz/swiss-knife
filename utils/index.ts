@@ -14,15 +14,16 @@ import {
   CHAINLABEL_KEY,
   erc3770ShortNameToChain,
   TX_KEY,
-} from "@/data/common";
+} from "../data/common";
 import {
   ContractResponse,
   ExplorerData,
   ExplorerType,
   SourceCode,
   EVMParameter,
-} from "@/types";
+} from "../types";
 import { formatEther, formatUnits } from "viem";
+import { fetchFunctionInterface } from "../lib/decoder";
 
 export const getPath = (subdomain: string) => {
   return process.env.NEXT_PUBLIC_DEVELOPMENT === "true"
@@ -130,7 +131,6 @@ export const slicedText = (txt: string, charCount: number = 6) => {
 };
 import { NextRequest } from "next/server";
 import { InterfaceAbi } from "ethers";
-import { fetchFunctionInterface } from "@/lib/decoder";
 import { whatsabi } from "@shazow/whatsabi";
 
 export default function getIP(request: Request | NextRequest) {
