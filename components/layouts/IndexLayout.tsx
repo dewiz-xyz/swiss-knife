@@ -1,13 +1,11 @@
-import { Poppins } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { Analytics } from "@/components/Analytics";
-
-const poppins = Poppins({ weight: "400", subsets: ["latin"] });
+import '../../app/styles/fonts.css';
 
 export const IndexLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body style={{ fontFamily: 'Poppins, sans-serif' }}>
         <Analytics />
         <Providers>{children}</Providers>
       </body>
