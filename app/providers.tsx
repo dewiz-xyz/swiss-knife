@@ -61,7 +61,9 @@ const chains: readonly [Chain, ...Chain[]] = [
 ];
 
 const appName = "Swiss-Knife.xyz";
-const projectId = process.env.NEXT_PUBLIC_WC_PROJECT_ID!;
+const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'dummy-id';
+
+// Use the projectId in your configuration
 
 const connectors = connectorsForWallets(
   [
